@@ -1,0 +1,36 @@
+:root {
+--toucan-black: #2d2d2d;
+--toucan-yellow: #ffd700;
+--toucan-orange: #ff8c00;
+--toucan-white: #f9f9f9;
+}
+
+body { font-family: 'Segoe UI', sans-serif; background: #e0f2f1; display: flex; justify-content: center; padding-top: 50px; }
+.toucan-app { background: white; width: 350px; padding: 2rem; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); border-top: 8px solid var(--toucan-orange); }
+h1 { color: var(--toucan-black); text-align: center; margin-bottom: 1.5rem; }
+
+.input-group { display: flex; gap: 5px; margin-bottom: 1rem; }
+input { flex: 1; padding: 10px; border: 2px solid #eee; border-radius: 5px; outline: none; }
+input:focus { border-color: var(--toucan-yellow); }
+button { padding: 10px; background: var(--toucan-black); color: white; border: none; border-radius: 5px; cursor: pointer; }
+
+.tabs { display: flex; margin-bottom: 1rem; border-bottom: 2px solid #eee; }
+.tab { flex: 1; background: none; color: #888; border: none; padding: 10px; cursor: pointer; transition: 0.3s; }
+.tab.active { color: var(--toucan-orange); border-bottom: 2px solid var(--toucan-orange); font-weight: bold; }
+
+ul { list-style: none; padding: 0; }
+.todo-item { 
+display: flex; align-items: center; padding: 12px; border-bottom: 1px solid #eee; position: relative; transition: 0.2s; 
+}
+.todo-item:hover { background: #fffdf0; }
+
+.circle { width: 18px; height: 18px; border: 2px solid var(--toucan-yellow); border-radius: 50%; margin-right: 15px; cursor: pointer; }
+.complete .circle { background: var(--toucan-yellow); }
+.text { flex: 1; font-size: 14px; }
+.complete .text { text-decoration: line-through; color: #aaa; }
+
+/* Buttons appear only on hover */
+.actions { display: none; gap: 5px; }
+.todo-item:hover .actions { display: flex; }
+.actions button { font-size: 11px; padding: 4px 8px; background: #eee; color: #555; }
+.actions .del-btn:hover { background: #ff4444; color: white; }
